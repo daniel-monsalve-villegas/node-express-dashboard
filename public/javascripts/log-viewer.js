@@ -1,1 +1,1 @@
-const connection = new WebSocket('https://localhost:3000');
+const connection = new WebSocket('ws://localhost:3000');
