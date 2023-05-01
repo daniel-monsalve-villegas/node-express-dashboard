@@ -17,6 +17,7 @@ router.get('/', (req, res, next) => {
 
 /* GET select file. */
 router.get('/select-file', (req, res, next) => {
+  fileService.setcwd(getDefaultDir());
   res.render('select-file', { title: 'Select Log File' });
 });
 
