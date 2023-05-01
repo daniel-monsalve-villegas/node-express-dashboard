@@ -11,7 +11,7 @@ function getSettings() {
 function writeSettings(newSettings) {
   const settingsJSON = JSON.stringify(newSettings, null, 2);
   try {
-    settingsFilePath = fs.writeFileSync(settingsJSON);
+    fs.writeFileSync(settingsFilePath, settingsJSON);
     return true;
   } catch {
     return false;
