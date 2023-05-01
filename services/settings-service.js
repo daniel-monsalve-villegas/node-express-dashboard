@@ -1,19 +1,19 @@
+const fs = require('fs');
+const path = require('path');
+
 function getSettings() {
-  return {}
+  return {};
 }
 
-function writeSettings(newSettings) {
-}
+function writeSettings(newSettings) {}
 
-function getDefaultDir() {
-}
+function getDefaultDir() {}
 
-function isValidDir(dirPath) {
-}
+function isValidDir(dirPath) {}
 
 module.exports = {
   getSettings,
   writeSettings,
   getDefaultDir,
-  isValidDir
+  isValidDir,
 };
