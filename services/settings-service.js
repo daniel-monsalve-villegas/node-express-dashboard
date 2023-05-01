@@ -20,7 +20,14 @@ function writeSettings(newSettings) {
 
 function getDefaultDir() {}
 
-function isValidDir(dirPath) {}
+function isValidDir(dirPath) {
+  try {
+    fs.readdirSync(dirPath);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 module.exports = {
   getSettings,
