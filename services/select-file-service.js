@@ -27,6 +27,14 @@ function isDirectory(currentDir, file) {
   return fileInfo.isDirectory();
 }
 
-function readDir(currentDir, res, query) {}
+function readDir(currentDir, res, query) {
+  fs.readdir(currentDir, (err, files) => {
+    const directoryContents = [];
+    if (err === false) {
+      directoryContents = getDirectoryContents(files, currentDir, query);
+    }
+    res.json(directoryContents);
+  });
+}
 
 exports.get = (req, res) => {};
