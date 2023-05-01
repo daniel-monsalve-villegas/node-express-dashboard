@@ -3,7 +3,6 @@ const logWindow = document.querySelector('#log-window');
 const filePath = document.getElementById('logFilePath').value;
 
 connection.onopen = () => {
-  connection.send('Hello from the client!');
   if (filePath) {
     connection.send(filePath);
   }
