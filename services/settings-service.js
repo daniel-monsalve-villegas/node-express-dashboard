@@ -18,7 +18,13 @@ function writeSettings(newSettings) {
   }
 }
 
-function getDefaultDir() {}
+function getDefaultDir() {
+  const defaultDir = getSettings().defaultDir;
+  if (!defaultDir) {
+    return process.cwd()
+  }
+  return isValidDir(defaultDir) ? defaultDir : process.cwd()
+}
 
 function isValidDir(dirPath) {
   try {
