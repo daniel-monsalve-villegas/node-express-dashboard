@@ -8,7 +8,15 @@ function getSettings() {
   return JSON.parse(settingsData);
 }
 
-function writeSettings(newSettings) {}
+function writeSettings(newSettings) {
+  const settingsJSON = JSON.stringify(newSettings, null, 2);
+  try {
+    settingsFilePath = fs.writeFileSync(settingsJSON);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 function getDefaultDir() {}
 
