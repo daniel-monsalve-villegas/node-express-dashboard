@@ -1,11 +1,10 @@
-function getDirectoryContents(files, currentDir, query) {
-}
+const fs = require('fs');
+const path = require('path');
 
-function isDirectory(currentDir, file) {
-}
+function getDirectoryContents(files, currentDir, query) {}
 
-function readDir(currentDir, res, query) {
-}
+function isDirectory(currentDir, file) {}
 
-exports.get = (req, res) => {
-};
+function readDir(currentDir, res, query) {}
+
+exports.get = (req, res) => {};
