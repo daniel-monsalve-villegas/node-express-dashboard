@@ -29,8 +29,8 @@ function isDirectory(currentDir, file) {
 
 function readDir(currentDir, res, query) {
   fs.readdir(currentDir, (err, files) => {
-    const directoryContents = [];
-    if (err === false) {
+    let directoryContents = [];
+    if (!err) {
       directoryContents = getDirectoryContents(files, currentDir, query);
     }
     res.json(directoryContents);
